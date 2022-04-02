@@ -1,3 +1,4 @@
+import os
 
 # testing Fibonacci number function
 def fib(n: int) -> int:
@@ -5,4 +6,4 @@ def fib(n: int) -> int:
 
 
 def test_fibonacci():
-    assert fib(10) == 55
+    assert fib(int(os.environ["FIB_INPUT"])) == 55  # It was 54 before
